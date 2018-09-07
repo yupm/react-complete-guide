@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Aux from '../../hoc/Aux';
+import Fux from '../../hoc/Fux';
 import Burger from '../../components/Burger/Burger';
 import BuildControls from '../../components/Burger/BuildControls/BuildControls';
 import Modal from '../../components/UI/Modal/Modal';
@@ -121,7 +121,7 @@ class BurgerBuilder extends Component {
 
         if(this.props.ings){
             burger = (
-                <Aux>
+                <Fux>
                 <Burger ingredients={this.props.ings}/>
                 <BuildControls
                     ingredientAdded={this.props.onIngredientAdded}
@@ -132,7 +132,7 @@ class BurgerBuilder extends Component {
                     ordered ={this.purchaseHandler}
                     isAuth={this.props.isAuthenticated}
                 />
-                </Aux>
+                </Fux>
             );
 
             orderSummary =   <OrderSummary ingredients={this.props.ings}
@@ -149,12 +149,12 @@ class BurgerBuilder extends Component {
         // }
 
         return(
-            <Aux>
+            <Fux>
                 <Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler}>
                   {orderSummary}
                 </Modal>
                 {burger}
-            </Aux>
+            </Fux>
         );
     }
 }

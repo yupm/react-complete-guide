@@ -1,15 +1,15 @@
 import React from 'react';
-import Aux from '../../hoc/Aux';
+import Fux from '../../hoc/Fux';
 import classes from './Layout.css';
 import Toolbar from '../Navigation/Toolbar/Toolbar';
 
 const layout = ( props ) => (
-    <Aux>
+    <Fux>
         <Toolbar />
         <main className={classes.Content}>
             {props.children}
         </main>
-    </Aux>
+    </Fux>
 );
 
 export default layout;

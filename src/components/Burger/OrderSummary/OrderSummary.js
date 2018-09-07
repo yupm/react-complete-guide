@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import Aux from '../../../hoc/Aux';
+import Fux from '../../../hoc/Fux';
 import Button from '../../UI/Button/Button';
 
 class OrderSummary extends Component{
@@ -17,7 +17,7 @@ class OrderSummary extends Component{
 
         console.log("Order summary: " , this.props.ingredients);
         return(
-            <Aux>
+            <Fux>
                 <h3>Your Order</h3>
                 <p>A delicious burger with the following ingredients:</p>
                 <ul>
@@ -33,7 +33,7 @@ class OrderSummary extends Component{
                 btnType="Success"
                 clicked={this.props.purchaseContinued}
                 >CONTINUE</Button>
-            </Aux>
+            </Fux>
         );
     }
 }
